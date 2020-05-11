@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>UserRegistration</servlet-name>
+  	<display-name>UserRegistration</display-name>
+  	<description></description>
+  	<servlet-class>com.narayanatutorial.password.policies.UserRegistration</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CSRFInit</servlet-name>
+  	<display-name>CSRFInit</display-name>
+  	<description></description>
+  	<servlet-class>com.narayanatutorial.csrf.CSRFInit</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CSRFValidate</servlet-name>
+  	<display-name>CSRFValidate</display-name>
+  	<description></description>
+  	<servlet-class>com.narayanatutorial.csrf.CSRFValidate</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BruteForce</servlet-name>
+  	<display-name>BruteForce</display-name>
+  	<description></description>
+  	<servlet-class>com.narayanatutorial.bruteforce.BruteForce</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserRegistration</servlet-name>
+  	<url-pattern>/WeakPasswordPolicy/userregsave</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CSRFInit</servlet-name>
+  	<url-pattern>/adduser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CSRFValidate</servlet-name>
+  	<url-pattern>/saveuser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BruteForce</servlet-name>
+  	<url-pattern>/loginvalidate</url-pattern>
+  </servlet-mapping>
+</web-app>
